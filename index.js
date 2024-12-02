@@ -10,9 +10,11 @@ app.use(express.static(path.join(__dirname, "/public")));
 let users = {};
 
 
-http.listen(3001, () => {
-    console.log("Servidor corriendo en el puerto 3001");
+const port = process.env.PORT || 3001; 
+http.listen(port, () => {
+    console.log(`Servidor corriendo en el puerto ${port}`);
 });
+
 
 io.on("connection", (socket) => {
     console.log("Nuevo usuario conectado: ", socket.id); 
