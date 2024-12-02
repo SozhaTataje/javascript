@@ -93,7 +93,7 @@
         } else if (type == "actualizar") {
             let el = document.createElement("div");
             el.setAttribute("class", "actualizar");
-            el.innerText = `${message} a las ${time}`; // Hora de desconexión
+            el.innerText = `${message} a las ${time}`; 
             messageContainer.appendChild(el);
         }
         messageContainer.scrollTop = messageContainer.scrollHeight - messageContainer.clientHeight;
