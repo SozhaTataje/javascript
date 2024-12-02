@@ -13,6 +13,19 @@ body {
     background-color: #f8f1f9;
 }
 
+.message .time {
+    font-size: 0.8em;
+    color: gray;
+    margin-top: 5px;
+    text-align: right;
+}
+
+.actualizar {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 10px;
+    text-align: center;
+}
 
 .app {
     position: fixed;
