@@ -24,8 +24,8 @@ io.on("connection", (socket) => {
         const otherUsers = Object.keys(users).filter((id) => id !== socket.id);
         if (otherUsers.length > 0) {
             const otherUsername = users[otherUsers[0]];
-            socket.emit("update-header", otherUsername); // Enviar nombre del otro usuario
-            io.to(otherUsers[0]).emit("update-header", username); // Enviar nombre de este usuario
+            socket.emit("update-header", otherUsername); 
+            io.to(otherUsers[0]).emit("update-header", username);
         }
     });
 
@@ -38,6 +38,6 @@ io.on("connection", (socket) => {
         const username = users[socket.id];
         delete users[socket.id];
         console.log(`${username} dejó la conversación`);
-        socket.broadcast.emit("actualizar", `${username} dejó la conversación`); // Notificar desconexión
+        socket.broadcast.emit("actualizar", `${username} dejó la conversación`); 
     });
 });
