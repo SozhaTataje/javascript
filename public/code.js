@@ -98,7 +98,7 @@
         }
 
         function playSound() {
-            const audio = new Audio("./sound/notificacion.mp3");
+            const audio = new Audio("./sound/notificacion.mp3");//  audio   
             audio.play();
         }
 
